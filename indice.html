@@ -22,24 +22,20 @@
     <header class="topbar" role="banner" aria-label="Barra superior">
         <nav class="topbar__nav container" aria-label="Primária">
         <div class="topbar__left">
-            <button class="icon-btn" aria-label="Abrir menu">☰</button>
-            <a href="#" class="brand" aria-label="Página inicial">
-            <span class="brand__icon" aria-hidden="true">▶</span>
-            <span class="brand__text">YouPlay</span>
-            </a>
+            <img class="icon-btn" src="./src/assets/icons/menu_1.svg" alt="menu" />
+            <img class="image-logo" src="./src/assets/images/youtube_1.png" alt="logo do Youtube" />
+            
         </div>
 
         <form class="search" role="search" aria-label="Busca">
-            <label class="sr-only" for="q">Buscar</label>
-            <input id="q" name="q" type="search" placeholder="Pesquisar" />
-            <button type="submit" aria-label="Enviar busca">🔍</button>
+            <input id="search" type="search" placeholder="Pesquisar" />
+            <img class="icon-search" src="./src/assets/icons/search.svg" alt="icone de lupa" />
         </form>
 
         <div class="topbar__right">
-            <button class="icon-btn" aria-label="Enviar vídeo">⤴</button>
-            <button class="icon-btn" aria-label="Aplicativos">◻</button>
-            <button class="icon-btn" aria-label="Notificações">🔔</button>
-            <img class="avatar" src="" alt="Perfil do usuário" />
+            <img class="icon-send" src="./src/assets/icons/video.svg" alt="icone de uma câmera de video" />
+            <img class="icon-app" src="./src/assets/icons/bell.svg" alt="icone de um sino" />
+            <img class="avatar" src="./src/assets/images/Avatar.svg" alt="foto do usuário" />
         </div>
         </nav>
     </header>
@@ -48,76 +44,77 @@
     <main id="conteudo" class="shell container" aria-label="Conteúdo principal">
         <!-- COLUNA ESQUERDA -->
         <section class="primary" aria-label="Vídeo e detalhes">
-        <!-- Player (16:9) -->
-        <figure
-            class="player"
-            role="img"
-            aria-label="Player de vídeo, miniatura do conteúdo"
-        >
-            <figcaption class="sr-only">Player de vídeo 16 por 9</figcaption>
-        </figure>
-
-        <!-- Título -->
-        <h1 class="title">
-            Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo
-            Invertido com HTML e CSS
-        </h1>
-
-        <!-- Linha: canal + CTA + ações (Flex) -->
-        <div class="meta">
-            <div class="channel">
-            <img class="channel__avatar" src="" alt="" aria-hidden="true" />
-            <div class="channel__info">
-                <a href="#" class="channel__name">DIO</a>
-                <span class="channel__subs">83,3 mil inscritos</span>
-            </div>
-            <button
-                class="btn btn--subscribe"
-                aria-label="Inscrever-se no canal DIO"
+            <!-- Player (16:9) -->
+            <figure
+                class="player"
+                role="img"
+                aria-label="Player de vídeo, miniatura do conteúdo"
             >
-                INSCREVA-SE
-            </button>
-            </div>
+                <img class="primary-video" src="./src/assets/images/image2.png" alt="video principal com o logo da DIO" />
+                <figcaption class="sr-only">Player de vídeo 16 por 9</figcaption>
+            </figure>
 
-            <ul class="actions" role="list" aria-label="Ações do vídeo">
-            <li>
-                <button class="chip" aria-label="Gostei">
-                <span aria-hidden="true">👍</span> 2 mil
-                </button>
-            </li>
-            <li>
-                <button class="chip" aria-label="Não gostei">
-                <span aria-hidden="true">👎</span>
-                </button>
-            </li>
-            <li>
-                <button class="chip" aria-label="Compartilhar">
-                <span aria-hidden="true">↗</span> Compartilhar
-                </button>
-            </li>
-            <li>
-                <button class="chip" aria-label="Download">
-                <span aria-hidden="true">⬇</span> Download
-                </button>
-            </li>
-            </ul>
-        </div>
+            <!-- Título -->
+            <h1 class="title">
+                Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo
+                Invertido com HTML e CSS
+            </h1>
 
-        <hr class="divider" aria-hidden="true" />
+            <!-- Linha: canal + CTA + ações (Flex) -->
+            <section class="meta">
+                <div class="channel">
+                <img class="channel__avatar" src="./src/assets/images/channel_dio.jpg" alt="imagem do canal com o logo da DIO" aria-hidden="true" />
+                <div class="channel__info">
+                    <a href="#" class="channel__name">DIO</a>
+                    <span class="channel__subs">83,3 mil inscritos</span>
+                </div>
+                <button
+                    class="btn btn--subscribe"
+                    aria-label="Inscrever-se no canal DIO"
+                >
+                    INSCREVA-SE
+                </button>
+                </div>
 
-        <!-- Estatísticas e descrição -->
-        <section aria-labelledby="desc-title" class="desc">
-            <h2 id="desc-title" class="sr-only">Descrição do vídeo</h2>
-            <p class="stats">
-            28.418 visualizações • Transmitido ao vivo em 23 de ago. de 2022
-            </p>
-            <p class="description">
-            Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS.
-            Para isso, criaremos uma landing page com a temática da série
-            Stranger Things, contando com a implementação de um theme switcher
-            (light & dark) para explorar os mistérios do mundo invertido.
-            </p>
-        </section>
+                <section class="actions" role="list" aria-label="Ações do vídeo">
+                    <div>
+                        <button class="chip" aria-label="Gostei">
+                        <img class="classification" src="./src/assets/icons/thumbs-up.svg" alt="icone de uma mao com o polegar para cima - gostei" /> 2 mil
+                        </button>
+                    </div>
+                    <div>
+                        <button class="chip" aria-label="Não gostei">
+                        <img class="classification" src="./src/assets/icons/thumbs-down.svg" alt="icone de uma mao com o polegar para baixo - não gostei" /> Não gostei
+                        </button>
+                    </div>
+                    <div>
+                        <button class="chip" aria-label="Compartilhar">
+                        <img class="classification" src="./src/assets/icons/share-2.svg" alt="icone de compartilhar conteúdo" /> Compartilhar
+                        </button>
+                    </div>
+                    <div>
+                        <button class="chip" aria-label="Download">
+                        <img class="classification" src="./src/assets/icons/download.svg" alt="icone de download do conteúdo" /> Download
+                        </button>
+                    </div>
+                </section>
+            </section>
+
+            <hr class="divider" aria-hidden="true" />
+
+            <!-- Estatísticas e descrição -->
+            <section aria-labelledby="desc-title" class="desc">
+                <h2 id="desc-title" class="sr-only">Descrição do vídeo</h2>
+                <p class="stats">
+                28.418 visualizações • Transmitido ao vivo em 23 de ago. de 2022
+                </p>
+                <p class="description">
+                Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS.
+                Para isso, criaremos uma landing page com a temática da série
+                Stranger Things, contando com a implementação de um theme switcher
+                (light & dark) para explorar os mistérios do mundo invertido.
+                </p>
+            </section>
         </section>
 
         <!-- COLUNA DIREITA (ASIDE) -->

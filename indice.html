@@ -1,220 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta
-    name="description"
-    content="LP inspirada na página do YouTube com HTML5 + CSS3 (Grid e Flexbox), acessível."
-/>
-<title>LP — Estilo YouTube</title>
-<link rel="stylesheet" href="./styles/indice.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+        name="description"
+        content="LP inspirada na página do YouTube com HTML5 + CSS3 (Grid e Flexbox), acessível."
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
+
+    <title>LP — Estilo YouTube</title>
+    <link rel="stylesheet" href="./styles/indice.css" />
 </head>
 
 <body>
 
-<header class="topbar" role="banner" aria-label="Barra superior">
-    <nav class="topbar__nav container" aria-label="Primária">
-    <div class="topbar__left">
-        <button class="icon-btn" aria-label="Abrir menu">☰</button>
-        <a href="#" class="brand" aria-label="Página inicial">
-        <span class="brand__icon" aria-hidden="true">▶</span>
-        <span class="brand__text">YouPlay</span>
-        </a>
-    </div>
-
-    <form class="search" role="search" aria-label="Busca">
-        <label class="sr-only" for="q">Buscar</label>
-        <input id="q" name="q" type="search" placeholder="Pesquisar" />
-        <button type="submit" aria-label="Enviar busca">🔍</button>
-    </form>
-
-    <div class="topbar__right">
-        <button class="icon-btn" aria-label="Enviar vídeo">⤴</button>
-        <button class="icon-btn" aria-label="Aplicativos">◻</button>
-        <button class="icon-btn" aria-label="Notificações">🔔</button>
-        <img class="avatar" src="" alt="Perfil do usuário" />
-    </div>
-    </nav>
-</header>
-
-<!-- LAYOUT PRINCIPAL: GRID (player + lateral) -->
-<main id="conteudo" class="shell container" aria-label="Conteúdo principal">
-    <!-- COLUNA ESQUERDA -->
-    <section class="primary" aria-label="Vídeo e detalhes">
-    <!-- Player (16:9) -->
-    <figure
-        class="player"
-        role="img"
-        aria-label="Player de vídeo, miniatura do conteúdo"
-    >
-        <figcaption class="sr-only">Player de vídeo 16 por 9</figcaption>
-    </figure>
-
-    <!-- Título -->
-    <h1 class="title">
-        Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo
-        Invertido com HTML e CSS
-    </h1>
-
-    <!-- Linha: canal + CTA + ações (Flex) -->
-    <div class="meta">
-        <div class="channel">
-        <img class="channel__avatar" src="" alt="" aria-hidden="true" />
-        <div class="channel__info">
-            <a href="#" class="channel__name">DIO</a>
-            <span class="channel__subs">83,3 mil inscritos</span>
+    <header class="topbar" role="banner" aria-label="Barra superior">
+        <nav class="topbar__nav container" aria-label="Primária">
+        <div class="topbar__left">
+            <button class="icon-btn" aria-label="Abrir menu">☰</button>
+            <a href="#" class="brand" aria-label="Página inicial">
+            <span class="brand__icon" aria-hidden="true">▶</span>
+            <span class="brand__text">YouPlay</span>
+            </a>
         </div>
-        <button
-            class="btn btn--subscribe"
-            aria-label="Inscrever-se no canal DIO"
+
+        <form class="search" role="search" aria-label="Busca">
+            <label class="sr-only" for="q">Buscar</label>
+            <input id="q" name="q" type="search" placeholder="Pesquisar" />
+            <button type="submit" aria-label="Enviar busca">🔍</button>
+        </form>
+
+        <div class="topbar__right">
+            <button class="icon-btn" aria-label="Enviar vídeo">⤴</button>
+            <button class="icon-btn" aria-label="Aplicativos">◻</button>
+            <button class="icon-btn" aria-label="Notificações">🔔</button>
+            <img class="avatar" src="" alt="Perfil do usuário" />
+        </div>
+        </nav>
+    </header>
+
+    <!-- LAYOUT PRINCIPAL: GRID (player + lateral) -->
+    <main id="conteudo" class="shell container" aria-label="Conteúdo principal">
+        <!-- COLUNA ESQUERDA -->
+        <section class="primary" aria-label="Vídeo e detalhes">
+        <!-- Player (16:9) -->
+        <figure
+            class="player"
+            role="img"
+            aria-label="Player de vídeo, miniatura do conteúdo"
         >
-            INSCREVA-SE
-        </button>
+            <figcaption class="sr-only">Player de vídeo 16 por 9</figcaption>
+        </figure>
+
+        <!-- Título -->
+        <h1 class="title">
+            Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo
+            Invertido com HTML e CSS
+        </h1>
+
+        <!-- Linha: canal + CTA + ações (Flex) -->
+        <div class="meta">
+            <div class="channel">
+            <img class="channel__avatar" src="" alt="" aria-hidden="true" />
+            <div class="channel__info">
+                <a href="#" class="channel__name">DIO</a>
+                <span class="channel__subs">83,3 mil inscritos</span>
+            </div>
+            <button
+                class="btn btn--subscribe"
+                aria-label="Inscrever-se no canal DIO"
+            >
+                INSCREVA-SE
+            </button>
+            </div>
+
+            <ul class="actions" role="list" aria-label="Ações do vídeo">
+            <li>
+                <button class="chip" aria-label="Gostei">
+                <span aria-hidden="true">👍</span> 2 mil
+                </button>
+            </li>
+            <li>
+                <button class="chip" aria-label="Não gostei">
+                <span aria-hidden="true">👎</span>
+                </button>
+            </li>
+            <li>
+                <button class="chip" aria-label="Compartilhar">
+                <span aria-hidden="true">↗</span> Compartilhar
+                </button>
+            </li>
+            <li>
+                <button class="chip" aria-label="Download">
+                <span aria-hidden="true">⬇</span> Download
+                </button>
+            </li>
+            </ul>
         </div>
 
-        <ul class="actions" role="list" aria-label="Ações do vídeo">
-        <li>
-            <button class="chip" aria-label="Gostei">
-            <span aria-hidden="true">👍</span> 2 mil
-            </button>
-        </li>
-        <li>
-            <button class="chip" aria-label="Não gostei">
-            <span aria-hidden="true">👎</span>
-            </button>
-        </li>
-        <li>
-            <button class="chip" aria-label="Compartilhar">
-            <span aria-hidden="true">↗</span> Compartilhar
-            </button>
-        </li>
-        <li>
-            <button class="chip" aria-label="Download">
-            <span aria-hidden="true">⬇</span> Download
-            </button>
-        </li>
+        <hr class="divider" aria-hidden="true" />
+
+        <!-- Estatísticas e descrição -->
+        <section aria-labelledby="desc-title" class="desc">
+            <h2 id="desc-title" class="sr-only">Descrição do vídeo</h2>
+            <p class="stats">
+            28.418 visualizações • Transmitido ao vivo em 23 de ago. de 2022
+            </p>
+            <p class="description">
+            Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS.
+            Para isso, criaremos uma landing page com a temática da série
+            Stranger Things, contando com a implementação de um theme switcher
+            (light & dark) para explorar os mistérios do mundo invertido.
+            </p>
+        </section>
+        </section>
+
+        <!-- COLUNA DIREITA (ASIDE) -->
+        <aside class="sidebar" aria-label="Próximos vídeos">
+        <h2 class="sidebar__title">Próximos</h2>
+
+        <!-- Lista de vídeos sugeridos: GRID por card -->
+        <ul class="suggestions" role="list">
+            <!-- Item -->
+            <li class="suggestion">
+            <a class="suggestion__link" href="#">
+                <div
+                class="thumb"
+                role="img"
+                aria-label="Miniatura: Scrum Talks"
+                ></div>
+                <div class="suggestion__meta">
+                <h3 class="suggestion__title">Scrum Talks</h3>
+                <p class="suggestion__channel">DigitalInnovationOne</p>
+                <p class="suggestion__stats">
+                    1,6 mi visualizações • há 3 dias
+                </p>
+                </div>
+            </a>
+            </li>
+
+            <li class="suggestion">
+            <a class="suggestion__link" href="#">
+                <div
+                class="thumb"
+                role="img"
+                aria-label="Miniatura: Machine Learning Avançado - Fast Track"
+                ></div>
+                <div class="suggestion__meta">
+                <h3 class="suggestion__title">
+                    Machine Learning Avançado - Fast Track
+                </h3>
+                <p class="suggestion__channel">DigitalInnovationOne</p>
+                <p class="suggestion__stats">
+                    1,7 mi visualizações • há 4 dias
+                </p>
+                </div>
+            </a>
+            </li>
+
+            <li class="suggestion">
+            <a class="suggestion__link" href="#">
+                <div
+                class="thumb"
+                role="img"
+                aria-label="Miniatura: Global Skills #2 - Project Planning"
+                ></div>
+                <div class="suggestion__meta">
+                <h3 class="suggestion__title">
+                    Global Skills #2 - Project Planning
+                </h3>
+                <p class="suggestion__channel">DigitalInnovationOne</p>
+                <p class="suggestion__stats">
+                    971 mil visualizações • há 5 dias
+                </p>
+                </div>
+            </a>
+            </li>
+
+            <li class="suggestion">
+            <a class="suggestion__link" href="#">
+                <div
+                class="thumb"
+                role="img"
+                aria-label="Miniatura: Como aprender a programar Python do ZERO"
+                ></div>
+                <div class="suggestion__meta">
+                <h3 class="suggestion__title">
+                    Como aprender a programar Python do ZERO
+                </h3>
+                <p class="suggestion__channel">DigitalInnovationOne</p>
+                <p class="suggestion__stats">
+                    711 mil visualizações • há 6 dias
+                </p>
+                </div>
+            </a>
+            </li>
+
+            <li class="suggestion">
+            <a class="suggestion__link" href="#">
+                <div
+                class="thumb"
+                role="img"
+                aria-label="Miniatura: Geração Tech Unimed - BH: Ciência de Dados"
+                ></div>
+                <div class="suggestion__meta">
+                <h3 class="suggestion__title">
+                    Geração Tech Unimed - BH: Ciência de Dados
+                </h3>
+                <p class="suggestion__channel">DigitalInnovationOne</p>
+                <p class="suggestion__stats">
+                    2,1 mi visualizações • há 2 dias
+                </p>
+                </div>
+            </a>
+            </li>
         </ul>
-    </div>
-
-    <hr class="divider" aria-hidden="true" />
-
-    <!-- Estatísticas e descrição -->
-    <section aria-labelledby="desc-title" class="desc">
-        <h2 id="desc-title" class="sr-only">Descrição do vídeo</h2>
-        <p class="stats">
-        28.418 visualizações • Transmitido ao vivo em 23 de ago. de 2022
-        </p>
-        <p class="description">
-        Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS.
-        Para isso, criaremos uma landing page com a temática da série
-        Stranger Things, contando com a implementação de um theme switcher
-        (light & dark) para explorar os mistérios do mundo invertido.
-        </p>
-    </section>
-    </section>
-
-    <!-- COLUNA DIREITA (ASIDE) -->
-    <aside class="sidebar" aria-label="Próximos vídeos">
-    <h2 class="sidebar__title">Próximos</h2>
-
-    <!-- Lista de vídeos sugeridos: GRID por card -->
-    <ul class="suggestions" role="list">
-        <!-- Item -->
-        <li class="suggestion">
-        <a class="suggestion__link" href="#">
-            <div
-            class="thumb"
-            role="img"
-            aria-label="Miniatura: Scrum Talks"
-            ></div>
-            <div class="suggestion__meta">
-            <h3 class="suggestion__title">Scrum Talks</h3>
-            <p class="suggestion__channel">DigitalInnovationOne</p>
-            <p class="suggestion__stats">
-                1,6 mi visualizações • há 3 dias
-            </p>
-            </div>
-        </a>
-        </li>
-
-        <li class="suggestion">
-        <a class="suggestion__link" href="#">
-            <div
-            class="thumb"
-            role="img"
-            aria-label="Miniatura: Machine Learning Avançado - Fast Track"
-            ></div>
-            <div class="suggestion__meta">
-            <h3 class="suggestion__title">
-                Machine Learning Avançado - Fast Track
-            </h3>
-            <p class="suggestion__channel">DigitalInnovationOne</p>
-            <p class="suggestion__stats">
-                1,7 mi visualizações • há 4 dias
-            </p>
-            </div>
-        </a>
-        </li>
-
-        <li class="suggestion">
-        <a class="suggestion__link" href="#">
-            <div
-            class="thumb"
-            role="img"
-            aria-label="Miniatura: Global Skills #2 - Project Planning"
-            ></div>
-            <div class="suggestion__meta">
-            <h3 class="suggestion__title">
-                Global Skills #2 - Project Planning
-            </h3>
-            <p class="suggestion__channel">DigitalInnovationOne</p>
-            <p class="suggestion__stats">
-                971 mil visualizações • há 5 dias
-            </p>
-            </div>
-        </a>
-        </li>
-
-        <li class="suggestion">
-        <a class="suggestion__link" href="#">
-            <div
-            class="thumb"
-            role="img"
-            aria-label="Miniatura: Como aprender a programar Python do ZERO"
-            ></div>
-            <div class="suggestion__meta">
-            <h3 class="suggestion__title">
-                Como aprender a programar Python do ZERO
-            </h3>
-            <p class="suggestion__channel">DigitalInnovationOne</p>
-            <p class="suggestion__stats">
-                711 mil visualizações • há 6 dias
-            </p>
-            </div>
-        </a>
-        </li>
-
-        <li class="suggestion">
-        <a class="suggestion__link" href="#">
-            <div
-            class="thumb"
-            role="img"
-            aria-label="Miniatura: Geração Tech Unimed - BH: Ciência de Dados"
-            ></div>
-            <div class="suggestion__meta">
-            <h3 class="suggestion__title">
-                Geração Tech Unimed - BH: Ciência de Dados
-            </h3>
-            <p class="suggestion__channel">DigitalInnovationOne</p>
-            <p class="suggestion__stats">
-                2,1 mi visualizações • há 2 dias
-            </p>
-            </div>
-        </a>
-        </li>
-    </ul>
-    </aside>
-</main>
+        </aside>
+    </main>
 </body>
 </html>

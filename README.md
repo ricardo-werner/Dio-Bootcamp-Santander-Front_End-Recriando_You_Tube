@@ -99,7 +99,7 @@ Abaixo está o fluxograma representando a estrutura do DOM utilizada neste proje
 1. **Clone o repositório:**
 
 ```bash
-git clone
+git clone https://github.com/ricardo-werner/Dio-Bootcamp-Santander-Front_End-Recriando_You_Tube.git
 ```
 
 2. Abra o projeto no VS Code

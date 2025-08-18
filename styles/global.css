@@ -302,6 +302,10 @@ body {
     } /* busca ocupa largura total na topbar */
 }
 @media (max-width: 560px) {
+    .topbar {
+        width: 100%;
+        position: fixed;
+    }
     .suggestion__link {
         grid-template-columns: 1fr;
     }

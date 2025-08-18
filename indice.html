@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="shortcut icon" type="image/x-icon" href="./src/assets/icons/favicon.ico">
+    <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="./src/assets/icons/favicon.ico"
+    />
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,51 +16,82 @@
         name="description"
         content="LP inspirada na página do YouTube com HTML5 + CSS3 (Grid e Flexbox), acessível."
     />
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="author" content="Ricardo Werner">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="author" content="Ricardo Werner" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+        rel="stylesheet"
+    />
 
     <title>LP — Recriando YouTube</title>
     <link rel="stylesheet" href="./styles/indice.css" />
-</head>
+    </head>
 
-<body>
+    <body>
+        <header class="topbar" role="banner" aria-label="Barra superior">
+            <nav class="topbar__nav container" aria-label="Primária">
+                <div class="topbar__left">
+                <img
+                    class="icon-btn"
+                    src="./src/assets/icons/menu_1.svg"
+                    alt="menu"
+                />
+                <img
+                    class="image-logo"
+                    src="./src/assets/images/youtube_1.png"
+                    alt="logo do Youtube"
+                />
+                </div>
 
-    <header class="topbar" role="banner" aria-label="Barra superior">
-        <nav class="topbar__nav container" aria-label="Primária">
-        <div class="topbar__left">
-            <img class="icon-btn" src="./src/assets/icons/menu_1.svg" alt="menu" />
-            <img class="image-logo" src="./src/assets/images/youtube_1.png" alt="logo do Youtube" />
-            
-        </div>
+                <form class="search" role="search" aria-label="Busca">
+                    <input id="search" type="search" placeholder="Pesquisar" />
+                    <img
+                        class="icon-search"
+                        src="./src/assets/icons/search.svg"
+                        alt="icone de lupa"
+                    />
+                </form>
 
-        <form class="search" role="search" aria-label="Busca">
-            <input id="search" type="search" placeholder="Pesquisar" />
-            <img class="icon-search" src="./src/assets/icons/search.svg" alt="icone de lupa" />
-        </form>
+                <div class="topbar__right">
+                    <img
+                        class="icon-send"
+                        src="./src/assets/icons/video.svg"
+                        alt="icone de uma câmera de video"
+                    />
+                    <img
+                        class="icon-app"
+                        src="./src/assets/icons/bell.svg"
+                        alt="icone de um sino"
+                    />
+                    <img
+                        class="avatar"
+                        src="./src/assets/images/Avatar.svg"
+                        alt="foto do usuário"
+                    />
+                </div>
+            </nav>
+        </header>
 
-        <div class="topbar__right">
-            <img class="icon-send" src="./src/assets/icons/video.svg" alt="icone de uma câmera de video" />
-            <img class="icon-app" src="./src/assets/icons/bell.svg" alt="icone de um sino" />
-            <img class="avatar" src="./src/assets/images/Avatar.svg" alt="foto do usuário" />
-        </div>
-        </nav>
-    </header>
+        <main
+            id="conteudo"
+            class="content container"
+            aria-label="Conteúdo principal"
+        >
 
-    <!-- LAYOUT PRINCIPAL: GRID (player + lateral) -->
-    <main id="conteudo" class="content container" aria-label="Conteúdo principal">
-        <!-- COLUNA ESQUERDA -->
         <section class="primary" aria-label="Vídeo e detalhes">
-            <!-- Player (16:9) -->
             <figure
                 class="player"
                 role="img"
                 aria-label="Player de vídeo, miniatura do conteúdo"
             >
-                <img class="primary-video" src="./src/assets/images/image2.png" alt="video principal com o logo da DIO" />
+                <img
+                    class="primary-video"
+                    src="./src/assets/images/image2.png"
+                    alt="video principal com o logo da DIO"
+                />
                 <figcaption class="sr-only">Player de vídeo 16 por 9</figcaption>
             </figure>
 
@@ -67,15 +102,15 @@
 
             <section class="meta">
                 <div class="channel">
-                    <img class="channel__avatar" src="./src/assets/images/channel_dio.jpg" alt="imagem do canal com o logo da DIO" aria-hidden="true"
+                    <img
+                        class="channel__avatar"
+                        src="./src/assets/images/channel_dio.jpg"
+                        alt="imagem do canal com o logo da DIO"
+                        aria-hidden="true"
                     />
                     <div class="channel__info">
-                        <a href="#" class="channel__name">
-                            DIO
-                        </a>
-                        <span class="channel__subs">
-                            83,3 mil inscritos
-                        </span>
+                        <a href="#" class="channel__name"> DIO </a>
+                        <span class="channel__subs"> 83,3 mil inscritos </span>
                     </div>
                     <button
                         class="btn btn--subscribe"
@@ -88,22 +123,42 @@
                 <section class="actions" role="list" aria-label="Ações do vídeo">
                     <div>
                         <button class="chip" aria-label="Gostei">
-                        <img class="classification" src="./src/assets/icons/thumbs-up.svg" alt="icone de uma mao com o polegar para cima - gostei" /> 2 mil
+                            <img
+                                class="classification"
+                                src="./src/assets/icons/thumbs-up.svg"
+                                alt="icone de uma mao com o polegar para cima - gostei"
+                            />
+                            2 mil
                         </button>
                     </div>
                     <div>
                         <button class="chip" aria-label="Não gostei">
-                        <img class="classification" src="./src/assets/icons/thumbs-down.svg" alt="icone de uma mao com o polegar para baixo - não gostei" /> Não gostei
+                            <img
+                                class="classification"
+                                src="./src/assets/icons/thumbs-down.svg"
+                                alt="icone de uma mao com o polegar para baixo - não gostei"
+                            />
+                            Não gostei
                         </button>
                     </div>
                     <div>
                         <button class="chip" aria-label="Compartilhar">
-                        <img class="classification" src="./src/assets/icons/share-2.svg" alt="icone de compartilhar conteúdo" /> Compartilhar
+                            <img
+                                class="classification"
+                                src="./src/assets/icons/share-2.svg"
+                                alt="icone de compartilhar conteúdo"
+                            />
+                            Compartilhar
                         </button>
                     </div>
                     <div>
                         <button class="chip" aria-label="Download">
-                        <img class="classification" src="./src/assets/icons/download.svg" alt="icone de download do conteúdo" /> Download
+                            <img
+                                class="classification"
+                                src="./src/assets/icons/download.svg"
+                                alt="icone de download do conteúdo"
+                            />
+                            Download
                         </button>
                     </div>
                 </section>
@@ -111,174 +166,330 @@
 
             <hr class="divider" aria-hidden="true" />
 
-            <!-- Estatísticas e descrição -->
             <section aria-labelledby="desc-title" class="desc">
                 <h2 id="desc-title" class="sr-only">Descrição do vídeo</h2>
                 <p class="stats">
-                28.418 visualizações • Transmitido ao vivo em 23 de ago. de 2022
+                    28.418 visualizações • Transmitido ao vivo em 23 de ago. de 2022
                 </p>
                 <p class="description">
-                Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS.
-                Para isso, criaremos uma landing page com a temática da série
-                Stranger Things, a qual contará com a implementação de um theme switcher
-                (light & dark) para explorar os mistérios do mundo invertido.
+                    Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS.
+                    Para isso, criaremos uma landing page com a temática da série
+                    Stranger Things, a qual contará com a implementação de um theme
+                    switcher (light & dark) para explorar os mistérios do mundo
+                    invertido.
                 </p>
             </section>
         </section>
 
-        <!-- COLUNA DIREITA (ASIDE) -->
         <aside class="sidebar" aria-label="Próximos vídeos">
-        <h2 class="sidebar__title">Próximos</h2>
+            <h2 class="sidebar__title">
+                Próximos
+            </h2>
 
-        <!-- Lista de vídeos sugeridos: GRID por card -->
-        <ul class="suggestions" role="list">
-            <!-- Item -->
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=0kpfMxtX7M4">
-                <img src="./src/assets/images/video_4.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">Scrum Talks</h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    1,6 mi visualizações • há 3 dias
-                </p>
-                </div>
-            </a>
-            </li>
+            <ul class="suggestions" role="list">
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=0kpfMxtX7M4"
+                    >
+                    <img
+                        src="./src/assets/images/video_4.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Scrum Talks
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            1,6 mi visualizações • há 3 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
 
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Ru9AyUPSNPk">
-                <img src="./src/assets/images/video_5.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">
-                    Machine Learning Avançado - Fast Track
-                </h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    1,7 mi visualizações • há 4 dias
-                </p>
-                </div>
-            </a>
-            </li>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=Ru9AyUPSNPk"
+                    >
+                    <img
+                        src="./src/assets/images/video_5.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Machine Learning Avançado - Fast Track
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            1,7 mi visualizações • há 4 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
 
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=gTYMAoX_27c">
-                <img src="./src/assets/images/video_3.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">
-                    Global Skills #2 - Project Planning
-                </h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    971 mil visualizações • há 5 dias
-                </p>
-                </div>
-            </a>
-            </li>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=gTYMAoX_27c"
+                    >
+                    <img
+                        src="./src/assets/images/video_3.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Global Skills #2 - Project Planning
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            971 mil visualizações • há 5 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
 
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=LWyxFrwSGoM">
-                <img src="./src/assets/images/video_2.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">
-                    Como aprender a programar Python do ZERO
-                </h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    711 mil visualizações • há 6 dias
-                </p>
-                </div>
-            </a>
-            </li>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=LWyxFrwSGoM"
+                    >
+                    <img
+                        src="./src/assets/images/video_2.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Como aprender a programar Python do ZERO
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            711 mil visualizações • há 6 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
 
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=PkEpHoXUkeM">
-                <img src="./src/assets/images/video_1.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">
-                    Geração Tech Unimed - BH: Ciência de Dados
-                </h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    2,1 mi visualizações • há 2 dias
-                </p>
-                </div>
-            </a>
-            </li>
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=0kpfMxtX7M4">
-                <img src="./src/assets/images/video_4.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">Scrum Talks</h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    1,6 mi visualizações • há 3 dias
-                </p>
-                </div>
-            </a>
-            </li>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=PkEpHoXUkeM"
+                    >
+                    <img
+                        src="./src/assets/images/video_1.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Geração Tech Unimed - BH: Ciência de Dados
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            2,1 mi visualizações • há 2 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=0kpfMxtX7M4"
+                    >
+                    <img
+                        src="./src/assets/images/video_4.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Scrum Talks
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            1,6 mi visualizações • há 3 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
 
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Ru9AyUPSNPk">
-                <img src="./src/assets/images/video_5.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">
-                    Machine Learning Avançado - Fast Track
-                </h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    1,7 mi visualizações • há 4 dias
-                </p>
-                </div>
-            </a>
-            </li>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=Ru9AyUPSNPk"
+                    >
+                    <img
+                        src="./src/assets/images/video_5.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Machine Learning Avançado - Fast Track
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            1,7 mi visualizações • há 4 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
 
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=gTYMAoX_27c">
-                <img src="./src/assets/images/video_3.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">
-                    Global Skills #2 - Project Planning
-                </h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    971 mil visualizações • há 5 dias
-                </p>
-                </div>
-            </a>
-            </li>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=gTYMAoX_27c"
+                    >
+                    <img
+                        src="./src/assets/images/video_3.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Global Skills #2 - Project Planning
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            971 mil visualizações • há 5 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
 
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=LWyxFrwSGoM">
-                <img src="./src/assets/images/video_2.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">
-                    Como aprender a programar Python do ZERO
-                </h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    711 mil visualizações • há 6 dias
-                </p>
-                </div>
-            </a>
-            </li>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=LWyxFrwSGoM"
+                    >
+                    <img
+                        src="./src/assets/images/video_2.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Como aprender a programar Python do ZERO
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            711 mil visualizações • há 6 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
 
-            <li class="suggestion">
-            <a class="suggestion__link" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=PkEpHoXUkeM">
-                <img src="./src/assets/images/video_1.png" alt="Miniatura do vídeo" class="thumb" />
-                <div class="suggestion__meta">
-                <h3 class="suggestion__title">
-                    Geração Tech Unimed - BH: Ciência de Dados
-                </h3>
-                <p class="suggestion__channel">DigitalInnovationOne</p>
-                <p class="suggestion__stats">
-                    2,1 mi visualizações • há 2 dias
-                </p>
-                </div>
-            </a>
-            </li>
-        </ul>
+                <li class="suggestion">
+                    <a
+                        class="suggestion__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.youtube.com/watch?v=PkEpHoXUkeM"
+                    >
+                    <img
+                        src="./src/assets/images/video_1.png"
+                        alt="Miniatura do vídeo"
+                        class="thumb"
+                    />
+                    <div class="suggestion__meta">
+                        <h3 class="suggestion__title">
+                            Geração Tech Unimed - BH: Ciência de Dados
+                        </h3>
+                        <p class="suggestion__channel">
+                            DigitalInnovationOne
+                        </p>
+                        <p class="suggestion__stats">
+                            2,1 mi visualizações • há 2 dias
+                        </p>
+                    </div>
+                    </a>
+                </li>
+            </ul>
         </aside>
-    </main>
-</body>
+        </main>
+
+        <footer class="footer-main">
+            <p class="copyright" id="footer-content">
+                &copy; Copyright&nbsp;&nbsp;Ricardo Werner - Dev. em
+                Desenvolvimento&nbsp;&nbsp;
+            </p>
+            <script>
+                const date = new Date();
+                document.getElementById("footer-content").innerHTML +=
+                date.getFullYear();
+            </script>
+
+            <p class="redes">Rede para contatos</p>
+
+            <div class="social-icons">
+                <a
+                    href="https://www.linkedin.com/in/ricardo-werner"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="linkedin"
+                >
+                <img src="./src/assets/icons/linkedin.png" alt="Linkedin" />
+                </a>
+
+                <a
+                    href="https://www.github.com/ricardo-werner"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="github"
+                >
+                <img src="./src/assets/icons/github.png" alt="Github" />
+                </a>
+
+                <a
+                    href="https://wa.me/5548992102106?text=Olá,%20vamos%20conversar!!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="whatsapp"
+                >
+                <img src="./src/assets/icons/whatsapp.png" alt="Whatsapp" />
+                </a>
+            </div>
+        </footer>
+    </body>
 </html>

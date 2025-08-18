@@ -41,7 +41,7 @@
     </header>
 
     <!-- LAYOUT PRINCIPAL: GRID (player + lateral) -->
-    <main id="conteudo" class="shell container" aria-label="Conteúdo principal">
+    <main id="conteudo" class="content container" aria-label="Conteúdo principal">
         <!-- COLUNA ESQUERDA -->
         <section class="primary" aria-label="Vídeo e detalhes">
             <!-- Player (16:9) -->
@@ -54,26 +54,29 @@
                 <figcaption class="sr-only">Player de vídeo 16 por 9</figcaption>
             </figure>
 
-            <!-- Título -->
             <h1 class="title">
                 Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo
                 Invertido com HTML e CSS
             </h1>
 
-            <!-- Linha: canal + CTA + ações (Flex) -->
             <section class="meta">
                 <div class="channel">
-                <img class="channel__avatar" src="./src/assets/images/channel_dio.jpg" alt="imagem do canal com o logo da DIO" aria-hidden="true" />
-                <div class="channel__info">
-                    <a href="#" class="channel__name">DIO</a>
-                    <span class="channel__subs">83,3 mil inscritos</span>
-                </div>
-                <button
-                    class="btn btn--subscribe"
-                    aria-label="Inscrever-se no canal DIO"
-                >
-                    INSCREVA-SE
-                </button>
+                    <img class="channel__avatar" src="./src/assets/images/channel_dio.jpg" alt="imagem do canal com o logo da DIO" aria-hidden="true"
+                    />
+                    <div class="channel__info">
+                        <a href="#" class="channel__name">
+                            DIO
+                        </a>
+                        <span class="channel__subs">
+                            83,3 mil inscritos
+                        </span>
+                    </div>
+                    <button
+                        class="btn btn--subscribe"
+                        aria-label="Inscrever-se no canal DIO"
+                    >
+                        INSCREVA-SE
+                    </button>
                 </div>
 
                 <section class="actions" role="list" aria-label="Ações do vídeo">
@@ -111,7 +114,7 @@
                 <p class="description">
                 Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS.
                 Para isso, criaremos uma landing page com a temática da série
-                Stranger Things, contando com a implementação de um theme switcher
+                Stranger Things, a qual contará com a implementação de um theme switcher
                 (light & dark) para explorar os mistérios do mundo invertido.
                 </p>
             </section>
@@ -126,11 +129,7 @@
             <!-- Item -->
             <li class="suggestion">
             <a class="suggestion__link" href="#">
-                <div
-                class="thumb"
-                role="img"
-                aria-label="Miniatura: Scrum Talks"
-                ></div>
+                <img src="./src/assets/images/video_4.png" alt="Miniatura do vídeo" class="thumb" />
                 <div class="suggestion__meta">
                 <h3 class="suggestion__title">Scrum Talks</h3>
                 <p class="suggestion__channel">DigitalInnovationOne</p>
@@ -143,11 +142,7 @@
 
             <li class="suggestion">
             <a class="suggestion__link" href="#">
-                <div
-                class="thumb"
-                role="img"
-                aria-label="Miniatura: Machine Learning Avançado - Fast Track"
-                ></div>
+                <img src="./src/assets/images/video_5.png" alt="Miniatura do vídeo" class="thumb" />
                 <div class="suggestion__meta">
                 <h3 class="suggestion__title">
                     Machine Learning Avançado - Fast Track
@@ -162,11 +157,7 @@
 
             <li class="suggestion">
             <a class="suggestion__link" href="#">
-                <div
-                class="thumb"
-                role="img"
-                aria-label="Miniatura: Global Skills #2 - Project Planning"
-                ></div>
+                <img src="./src/assets/images/video_3.png" alt="Miniatura do vídeo" class="thumb" />
                 <div class="suggestion__meta">
                 <h3 class="suggestion__title">
                     Global Skills #2 - Project Planning
@@ -181,11 +172,7 @@
 
             <li class="suggestion">
             <a class="suggestion__link" href="#">
-                <div
-                class="thumb"
-                role="img"
-                aria-label="Miniatura: Como aprender a programar Python do ZERO"
-                ></div>
+                <img src="./src/assets/images/video_2.png" alt="Miniatura do vídeo" class="thumb" />
                 <div class="suggestion__meta">
                 <h3 class="suggestion__title">
                     Como aprender a programar Python do ZERO
@@ -200,11 +187,7 @@
 
             <li class="suggestion">
             <a class="suggestion__link" href="#">
-                <div
-                class="thumb"
-                role="img"
-                aria-label="Miniatura: Geração Tech Unimed - BH: Ciência de Dados"
-                ></div>
+                <img src="./src/assets/images/video_1.png" alt="Miniatura do vídeo" class="thumb" />
                 <div class="suggestion__meta">
                 <h3 class="suggestion__title">
                     Geração Tech Unimed - BH: Ciência de Dados
@@ -212,6 +195,48 @@
                 <p class="suggestion__channel">DigitalInnovationOne</p>
                 <p class="suggestion__stats">
                     2,1 mi visualizações • há 2 dias
+                </p>
+                </div>
+            </a>
+            </li>
+            <li class="suggestion">
+            <a class="suggestion__link" href="#">
+                <img src="./src/assets/images/video_4.png" alt="Miniatura do vídeo" class="thumb" />
+                <div class="suggestion__meta">
+                <h3 class="suggestion__title">Scrum Talks</h3>
+                <p class="suggestion__channel">DigitalInnovationOne</p>
+                <p class="suggestion__stats">
+                    1,6 mi visualizações • há 3 dias
+                </p>
+                </div>
+            </a>
+            </li>
+
+            <li class="suggestion">
+            <a class="suggestion__link" href="#">
+                <img src="./src/assets/images/video_5.png" alt="Miniatura do vídeo" class="thumb" />
+                <div class="suggestion__meta">
+                <h3 class="suggestion__title">
+                    Machine Learning Avançado - Fast Track
+                </h3>
+                <p class="suggestion__channel">DigitalInnovationOne</p>
+                <p class="suggestion__stats">
+                    1,7 mi visualizações • há 4 dias
+                </p>
+                </div>
+            </a>
+            </li>
+
+            <li class="suggestion">
+            <a class="suggestion__link" href="#">
+                <img src="./src/assets/images/video_3.png" alt="Miniatura do vídeo" class="thumb" />
+                <div class="suggestion__meta">
+                <h3 class="suggestion__title">
+                    Global Skills #2 - Project Planning
+                </h3>
+                <p class="suggestion__channel">DigitalInnovationOne</p>
+                <p class="suggestion__stats">
+                    971 mil visualizações • há 5 dias
                 </p>
                 </div>
             </a>

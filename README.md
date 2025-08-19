@@ -54,6 +54,7 @@ Abaixo está o fluxograma representando a estrutura do DOM utilizada neste proje
 | 5    | Adicionar links para acesso aos videos em nova guia e com segurança      |
 | 6    | Projeto sem dependências externas de JavaScript                          |
 | 7    | Possibilidade de uso como template de portfólio futuramente              |
+| 8    | Design da página no Figma: https://shre.ink/ttHN                         |
 
 ---
 

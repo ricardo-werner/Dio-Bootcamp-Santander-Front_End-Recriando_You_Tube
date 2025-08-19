@@ -5,7 +5,7 @@
 ### 🔗 Deploy
 
 🔗 Acesse a página publicada aqui:  
-👉 
+👉 https://ricardo-werner.github.io/Dio-Bootcamp-Santander-Front_End-Recriando_You_Tube/
 
 ---
 
